@@ -383,6 +383,187 @@
         font-size: 29px;
       }
     }
+    
+/* Growtechdigital - Professional homepage sections */
+.gt-section {
+  padding: 76px 20px;
+  color: #eaf2ff;
+}
+
+.gt-container {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.gt-heading {
+  max-width: 700px;
+  margin: 0 auto 42px;
+  text-align: center;
+}
+
+.gt-eyebrow {
+  display: inline-block;
+  color: #7dd3fc;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.gt-heading h2 {
+  color: #ffffff;
+  font-size: clamp(28px, 4vw, 42px);
+  line-height: 1.2;
+  margin: 0 0 16px;
+}
+
+.gt-heading p {
+  color: #a9bad1;
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.gt-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.gt-card {
+  background: linear-gradient(145deg, #142238, #0f192a);
+  border: 1px solid #263b55;
+  border-radius: 18px;
+  padding: 28px;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.gt-card:hover {
+  transform: translateY(-5px);
+  border-color: #38bdf8;
+}
+
+.gt-card h3 {
+  color: #ffffff;
+  font-size: 21px;
+  margin: 0 0 12px;
+}
+
+.gt-card p {
+  color: #a9bad1;
+  line-height: 1.8;
+  font-size: 15px;
+  margin: 0;
+}
+
+.gt-card-label {
+  color: #7dd3fc;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.gt-projects {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.gt-projects .gt-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.gt-projects .gt-card p {
+  margin-bottom: 18px;
+}
+
+.gt-projects .gt-card .gt-card-label {
+  margin-top: 0;
+}
+
+.gt-metric {
+  border-top: 1px solid #293b51;
+  padding-top: 14px;
+  margin-top: auto;
+  color: #7dd3fc;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.gt-process {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.gt-step {
+  position: relative;
+  background: #111b2d;
+  border: 1px solid #263b55;
+  border-radius: 16px;
+  padding: 25px 20px;
+}
+
+.gt-step-number {
+  color: #38bdf8;
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 22px;
+  display: block;
+}
+
+.gt-step h3 {
+  color: #ffffff;
+  font-size: 19px;
+  margin: 0 0 10px;
+}
+
+.gt-step p {
+  color: #a9bad1;
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.gt-note {
+  color: #91a5bd;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.7;
+  max-width: 780px;
+  margin: 26px auto 0;
+}
+
+@media (max-width: 850px) {
+  .gt-projects {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .gt-process {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .gt-section {
+    padding: 54px 16px;
+  }
+
+  .gt-grid,
+  .gt-projects,
+  .gt-process {
+    grid-template-columns: 1fr;
+  }
+
+  .gt-card {
+    padding: 23px;
+  }
+}
+
   </style>
 </head>
 
