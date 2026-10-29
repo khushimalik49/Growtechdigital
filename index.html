@@ -6,15 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Growtechdigital | Digital Marketing Agency in Delhi NCR</title>
-  <meta name="description" content="Growtechdigital offers SEO, website design, social media marketing, content marketing and PPC services to help businesses grow online in Delhi NCR.">
-  <meta name="robots" content="index, follow">
+  <meta name="description" content="Growtechdigital offers SEO, website design, social media marketing, content marketing and PPC services to help businesses strengthen their online presence in Delhi NCR.">
   <meta name="theme-color" content="#0b1120">
 
-  <meta name="google-site-verification" content="33LuijTIKG-5NRODB7oUbKBmWN041_WwP9Ych59Fy5A">
-
-  <link rel="canonical" href="https://khushimalik49.github.io/Growtechdigital/">
+  <!-- If your Google Search Console verification meta tag already exists,
+       copy your existing tag here before publishing. -->
 
   <style>
+    :root {
+      --bg: #0b1120;
+      --bg-soft: #0e1727;
+      --card: #111b2d;
+      --card-light: #142238;
+      --border: #263950;
+      --blue: #38bdf8;
+      --blue-light: #7dd3fc;
+      --white: #ffffff;
+      --text: #c0cde0;
+      --muted: #91a5bd;
+      --max-width: 1160px;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -27,10 +39,11 @@
     }
 
     body {
-      font-family: Arial, sans-serif;
-      background: #0b1120;
-      color: #f8fafc;
+      background: var(--bg);
+      color: var(--white);
+      font-family: Arial, Helvetica, sans-serif;
       line-height: 1.7;
+      overflow-x: hidden;
     }
 
     a {
@@ -38,182 +51,466 @@
       text-decoration: none;
     }
 
+    button,
+    input,
+    textarea {
+      font: inherit;
+    }
+
     .container {
-      width: min(1100px, 90%);
-      margin: auto;
+      width: min(var(--max-width), 90%);
+      margin: 0 auto;
     }
 
-    header {
-      padding: 18px 0;
-      border-bottom: 1px solid #263247;
-      background: #0b1120;
+    /* NAVIGATION */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 17, 32, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(125, 211, 252, 0.12);
     }
 
-    nav {
+    .nav-inner {
+      min-height: 76px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 24px;
     }
 
     .logo {
-      font-size: 24px;
+      color: var(--white);
+      font-size: 23px;
       font-weight: 800;
+      letter-spacing: -0.8px;
+      white-space: nowrap;
     }
 
-    .logo span,
-    .highlight {
-      color: #38bdf8;
+    .logo span {
+      color: var(--blue);
     }
 
-    .navlinks {
+    .nav-links {
       display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
+      align-items: center;
+      gap: 25px;
+      color: var(--text);
+      font-size: 14px;
     }
 
-    .navlinks a:hover {
-      color: #38bdf8;
+    .nav-links a {
+      transition: color 0.2s ease;
     }
+
+    .nav-links a:hover {
+      color: var(--blue-light);
+    }
+
+    .nav-cta {
+      color: #061321 !important;
+      background: var(--blue);
+      padding: 10px 17px;
+      border-radius: 8px;
+      font-weight: 700;
+    }
+
+    .nav-cta:hover {
+      background: var(--blue-light);
+    }
+
+    /* HERO */
 
     .hero {
-      padding: 100px 0 90px;
-      text-align: center;
+      position: relative;
+      padding: 105px 0 100px;
+      overflow: hidden;
       background:
-        radial-gradient(ellipse at top, #142743 0%, #0b1120 65%);
+        radial-gradient(ellipse at 78% 10%, rgba(56, 189, 248, 0.13), transparent 36%),
+        radial-gradient(ellipse at 10% 70%, rgba(30, 64, 110, 0.22), transparent 38%);
     }
 
-    .tag {
-      display: inline-block;
-      border: 1px solid #334155;
-      border-radius: 30px;
-      padding: 6px 15px;
-      color: #7dd3fc;
-      margin-bottom: 22px;
-      background: #111b2d;
-    }
-
-    h1 {
-      font-size: clamp(38px, 6vw, 65px);
-      line-height: 1.15;
-      margin-bottom: 22px;
-    }
-
-    .hero p {
-      color: #bdc8d8;
-      max-width: 720px;
-      margin: 0 auto 28px;
-      font-size: 18px;
-    }
-
-    .btn {
-      display: inline-block;
-      background: #38bdf8;
-      color: #07111e;
-      font-weight: 700;
-      padding: 12px 23px;
-      border-radius: 8px;
-      margin: 5px;
-      transition: background .2s, transform .2s;
-    }
-
-    .btn:hover {
-      background: #7dd3fc;
-      transform: translateY(-2px);
-    }
-
-    .btn.secondary {
-      background: transparent;
-      color: #f8fafc;
-      border: 1px solid #475569;
-    }
-
-    section {
-      padding: 75px 0;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .section-title h2 {
-      font-size: clamp(28px, 4vw, 36px);
-      line-height: 1.25;
-      margin-bottom: 12px;
-    }
-
-    .section-title p,
-    .muted {
-      color: #bdc8d8;
-    }
-
-    .section-title p {
-      max-width: 700px;
-      margin: auto;
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 55px;
+      align-items: center;
     }
 
     .eyebrow {
-      color: #38bdf8;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--blue-light);
       text-transform: uppercase;
-      letter-spacing: 2px;
       font-size: 12px;
       font-weight: 700;
-      margin-bottom: 10px;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
     }
 
-    .grid {
+    .eyebrow::before {
+      content: "";
+      display: block;
+      width: 25px;
+      height: 2px;
+      background: var(--blue);
+    }
+
+    .hero h1 {
+      max-width: 700px;
+      font-size: clamp(39px, 5.5vw, 67px);
+      line-height: 1.1;
+      letter-spacing: -2px;
+      margin-bottom: 23px;
+    }
+
+    .hero h1 span {
+      color: var(--blue);
+    }
+
+    .hero-copy {
+      max-width: 610px;
+      color: var(--text);
+      font-size: 17px;
+      margin-bottom: 30px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 27px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 13px 22px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 14px;
+      border: 1px solid transparent;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: #071321;
+    }
+
+    .btn-primary:hover {
+      background: var(--blue-light);
+    }
+
+    .btn-secondary {
+      border-color: #3a4b62;
+      color: var(--white);
+      background: rgba(17, 27, 45, 0.6);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--blue);
+    }
+
+    .hero-note {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 370px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .visual-glow {
+      position: absolute;
+      width: 290px;
+      height: 290px;
+      background: rgba(56, 189, 248, 0.12);
+      filter: blur(65px);
+      border-radius: 50%;
+    }
+
+    .visual-card {
+      position: relative;
+      width: 100%;
+      max-width: 390px;
+      padding: 29px;
+      background: linear-gradient(145deg, #17283f, #101a2b);
+      border: 1px solid #304763;
+      border-radius: 22px;
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.28);
+    }
+
+    .visual-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .visual-top strong {
+      font-size: 16px;
+    }
+
+    .status {
+      color: var(--blue-light);
+      font-size: 11px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      padding: 5px 9px;
+      border-radius: 20px;
+    }
+
+    .visual-title {
+      margin: 24px 0 17px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .visual-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(38, 57, 80, 0.7);
+    }
+
+    .visual-icon {
+      display: grid;
+      place-items: center;
+      width: 43px;
+      height: 43px;
+      flex-shrink: 0;
+      border-radius: 12px;
+      background: rgba(56, 189, 248, 0.1);
+      color: var(--blue-light);
+      font-size: 19px;
+    }
+
+    .visual-item strong {
+      display: block;
+      font-size: 14px;
+    }
+
+    .visual-item small {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* SECTION SHARED STYLES */
+
+    .section {
+      padding: 85px 0;
+    }
+
+    .section-alt {
+      background: var(--bg-soft);
+      border-top: 1px solid rgba(38, 57, 80, 0.45);
+      border-bottom: 1px solid rgba(38, 57, 80, 0.45);
+    }
+
+    .section-heading {
+      max-width: 720px;
+      margin: 0 auto 45px;
+      text-align: center;
+    }
+
+    .section-label {
+      color: var(--blue-light);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      display: inline-block;
+      margin-bottom: 13px;
+    }
+
+    .section-heading h2 {
+      color: var(--white);
+      font-size: clamp(29px, 4vw, 43px);
+      line-height: 1.2;
+      letter-spacing: -0.8px;
+      margin-bottom: 16px;
+    }
+
+    .section-heading p {
+      color: var(--text);
+      font-size: 15px;
+    }
+
+    /* SERVICES */
+
+    .service-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 20px;
     }
 
-    .card {
-      padding: 26px;
-      border: 1px solid #29374c;
-      background: #111b2d;
-      border-radius: 14px;
-      height: 100%;
+    .service-card {
+      padding: 29px 25px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: linear-gradient(145deg, var(--card), #0e1727);
+      transition: transform 0.25s ease, border-color 0.25s ease;
     }
 
-    .card h3 {
-      margin-bottom: 12px;
-      color: #7dd3fc;
-      font-size: 20px;
+    .service-card:hover {
+      transform: translateY(-5px);
+      border-color: #3985ac;
     }
 
-    .card p {
-      color: #bdc8d8;
+    .service-icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 13px;
+      background: rgba(56, 189, 248, 0.11);
+      color: var(--blue-light);
+      font-size: 21px;
+      margin-bottom: 22px;
     }
 
-    .card a:hover {
-      color: #38bdf8;
+    .service-card h3 {
+      color: var(--white);
+      font-size: 19px;
+      margin-bottom: 11px;
     }
 
-    .card-link {
-      display: inline-block;
-      color: #38bdf8;
+    .service-card p {
+      color: var(--text);
+      font-size: 14px;
+      margin-bottom: 19px;
+    }
+
+    .text-link {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      color: var(--blue-light);
+      font-size: 13px;
       font-weight: 700;
-      margin-top: 16px;
     }
 
-    .about {
-      background: #111827;
-      border-top: 1px solid #263247;
-      border-bottom: 1px solid #263247;
+    .text-link:hover {
+      color: var(--white);
     }
 
-    .about-content {
+    /* APPROACH */
+
+    .approach-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .approach-card {
+      padding: 29px;
+      background: linear-gradient(145deg, #142238, #101a2b);
+      border: 1px solid var(--border);
+      border-radius: 17px;
+    }
+
+    .card-label {
+      display: block;
+      color: var(--blue-light);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .approach-card h3 {
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+
+    .approach-card p {
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    /* SAMPLE PROJECTS */
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .project-card {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 27px 24px;
+      border-radius: 17px;
+      border: 1px solid var(--border);
+      background: linear-gradient(145deg, #142238, #101a2b);
+    }
+
+    .project-tag {
+      display: inline-block;
+      align-self: flex-start;
+      padding: 5px 10px;
+      border-radius: 5px;
+      color: var(--blue-light);
+      background: rgba(56, 189, 248, 0.1);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 19px;
+    }
+
+    .project-card h3 {
+      font-size: 20px;
+      line-height: 1.4;
+      margin-bottom: 15px;
+    }
+
+    .project-card p {
+      color: var(--text);
+      font-size: 13px;
+      margin-bottom: 15px;
+    }
+
+    .project-card p strong {
+      color: var(--white);
+    }
+
+    .project-measure {
+      margin-top: auto;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      color: var(--blue-light);
+      font-size: 12px;
+    }
+
+    .project-note {
       max-width: 800px;
-      margin: auto;
+      margin: 25px auto 0;
       text-align: center;
+      color: var(--muted);
+      font-size: 12px;
     }
 
-    .about-content p {
-      color: #bdc8d8;
-      margin-top: 15px;
-    }
+    /* PROCESS */
 
     .process-grid {
       display: grid;
@@ -221,485 +518,482 @@
       gap: 16px;
     }
 
-    .process-step {
-      padding: 22px;
-      border: 1px solid #29374c;
-      background: #111b2d;
-      border-radius: 12px;
+    .process-card {
+      padding: 25px 21px;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: var(--card);
     }
 
-    .step-number {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 38px;
-      height: 38px;
-      border-radius: 10px;
-      background: #16314a;
-      color: #7dd3fc;
+    .process-number {
+      display: block;
+      color: var(--blue);
+      font-size: 32px;
       font-weight: 800;
-      margin-bottom: 14px;
+      line-height: 1.2;
+      margin-bottom: 22px;
     }
 
-    .process-step h3 {
+    .process-card h3 {
       font-size: 18px;
-      margin-bottom: 8px;
+      margin-bottom: 9px;
     }
 
-    .process-step p {
-      color: #bdc8d8;
-      font-size: 14px;
+    .process-card p {
+      color: var(--text);
+      font-size: 13px;
     }
 
-    .case-label {
-      display: inline-block;
-      color: #7dd3fc;
-      border: 1px solid #33536b;
-      background: #10263b;
-      padding: 4px 10px;
-      border-radius: 30px;
-      font-size: 12px;
-      margin-bottom: 15px;
-    }
-
-    .case-note {
-      margin-top: 22px;
-      padding: 16px;
-      background: #111b2d;
-      border-left: 3px solid #38bdf8;
-      color: #bdc8d8;
-      font-size: 14px;
-      border-radius: 4px;
-    }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-    }
-
-    .why-item {
-      padding: 22px;
-      background: #111b2d;
-      border: 1px solid #29374c;
-      border-radius: 12px;
-    }
-
-    .why-item h3 {
-      color: #7dd3fc;
-      margin-bottom: 8px;
-    }
-
-    .why-item p {
-      color: #bdc8d8;
-    }
+    /* FAQ */
 
     .faq-list {
       max-width: 850px;
-      margin: auto;
+      margin: 0 auto;
+      display: grid;
+      gap: 13px;
     }
 
-    .faq-list details {
-      margin-bottom: 14px;
-      padding: 19px 22px;
-      background: #111b2d;
-      border: 1px solid #29374c;
+    .faq-item {
+      background: var(--card);
+      border: 1px solid var(--border);
       border-radius: 12px;
+      padding: 21px 23px;
     }
 
-    .faq-list summary {
-      cursor: pointer;
-      font-size: 17px;
-      font-weight: 700;
-      padding-right: 12px;
+    .faq-item h3 {
+      font-size: 16px;
+      margin-bottom: 9px;
     }
 
-    .faq-list summary::marker {
-      color: #38bdf8;
-    }
-
-    .faq-list details p {
-      color: #bdc8d8;
-      padding-top: 13px;
-    }
-
-    .contact-box {
-      text-align: center;
-      background: linear-gradient(135deg, #111b2d, #142943);
-      border: 1px solid #33516d;
-      border-radius: 18px;
-      padding: 48px 22px;
-    }
-
-    .contact-box p {
-      color: #bdc8d8;
-      max-width: 650px;
-      margin: 12px auto;
-    }
-
-    footer {
-      padding: 28px 0;
-      border-top: 1px solid #263247;
-      text-align: center;
-      color: #94a3b8;
+    .faq-item p {
+      color: var(--text);
       font-size: 14px;
     }
 
-    footer a {
-      color: #7dd3fc;
+    /* CONTACT */
+
+    .contact-box {
+      display: grid;
+      grid-template-columns: 1fr 0.85fr;
+      gap: 40px;
+      align-items: center;
+      padding: 42px;
+      background:
+        radial-gradient(ellipse at 100% 0%, rgba(56, 189, 248, 0.12), transparent 45%),
+        linear-gradient(145deg, #142238, #101a2b);
+      border: 1px solid #304763;
+      border-radius: 22px;
     }
 
-    @media (max-width: 850px) {
-      .grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .process-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
+    .contact-box h2 {
+      font-size: clamp(29px, 4vw, 41px);
+      line-height: 1.2;
+      margin-bottom: 16px;
     }
 
-    @media (max-width: 600px) {
-      .grid,
-      .why-grid,
-      .process-grid {
+    .contact-box p {
+      color: var(--text);
+      font-size: 15px;
+    }
+
+    .contact-details {
+      padding: 24px;
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      background: rgba(11, 17, 32, 0.5);
+    }
+
+    .contact-details span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 7px;
+    }
+
+    .contact-details a {
+      color: var(--blue-light);
+      overflow-wrap: anywhere;
+      font-size: 15px;
+    }
+
+    .contact-details a:hover {
+      color: var(--white);
+    }
+
+    .contact-details .contact-line + .contact-line {
+      margin-top: 20px;
+    }
+
+    /* FOOTER */
+
+    .footer {
+      margin-top: 80px;
+      border-top: 1px solid var(--border);
+      background: #080e19;
+    }
+
+    .footer-main {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 30px;
+      padding: 39px 0;
+    }
+
+    .footer-brand {
+      max-width: 380px;
+    }
+
+    .footer-brand p {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 11px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      color: var(--text);
+      font-size: 13px;
+    }
+
+    .footer-links a:hover {
+      color: var(--blue-light);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(38, 57, 80, 0.65);
+      text-align: center;
+      padding: 18px 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 950px) {
+      .nav-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        padding: 16px 0;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 13px 20px;
+      }
+
+      .hero-grid {
         grid-template-columns: 1fr;
+        gap: 25px;
       }
 
-      .navlinks {
-        gap: 12px;
-        font-size: 14px;
+      .hero-visual {
+        min-height: 300px;
+      }
+
+      .service-grid,
+      .project-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 650px) {
+      .container {
+        width: 90%;
       }
 
       .hero {
-        padding: 65px 0;
+        padding: 68px 0 58px;
       }
 
-      section {
-        padding: 55px 0;
+      .hero h1 {
+        letter-spacing: -1px;
       }
 
-      .section-title h2 {
-        font-size: 29px;
+      .hero-copy {
+        font-size: 15px;
+      }
+
+      .hero-visual {
+        min-height: auto;
+        padding: 12px 0;
+      }
+
+      .visual-card {
+        padding: 22px;
+      }
+
+      .section {
+        padding: 62px 0;
+      }
+
+      .service-grid,
+      .approach-grid,
+      .project-grid,
+      .process-grid,
+      .contact-box {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-box {
+        padding: 25px;
+        gap: 25px;
+      }
+
+      .footer-main {
+        flex-direction: column;
+      }
+
+      .nav-links {
+        font-size: 13px;
+        gap: 11px 15px;
+      }
+
+      .nav-cta {
+        padding: 7px 11px;
       }
     }
-    
-/* Growtechdigital - Professional homepage sections */
-.gt-section {
-  padding: 76px 20px;
-  color: #eaf2ff;
-}
-
-.gt-container {
-  max-width: 1120px;
-  margin: 0 auto;
-}
-
-.gt-heading {
-  max-width: 700px;
-  margin: 0 auto 42px;
-  text-align: center;
-}
-
-.gt-eyebrow {
-  display: inline-block;
-  color: #7dd3fc;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-bottom: 14px;
-}
-
-.gt-heading h2 {
-  color: #ffffff;
-  font-size: clamp(28px, 4vw, 42px);
-  line-height: 1.2;
-  margin: 0 0 16px;
-}
-
-.gt-heading p {
-  color: #a9bad1;
-  font-size: 16px;
-  line-height: 1.8;
-  margin: 0;
-}
-
-.gt-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 20px;
-}
-
-.gt-card {
-  background: linear-gradient(145deg, #142238, #0f192a);
-  border: 1px solid #263b55;
-  border-radius: 18px;
-  padding: 28px;
-  transition: transform 0.25s ease, border-color 0.25s ease;
-}
-
-.gt-card:hover {
-  transform: translateY(-5px);
-  border-color: #38bdf8;
-}
-
-.gt-card h3 {
-  color: #ffffff;
-  font-size: 21px;
-  margin: 0 0 12px;
-}
-
-.gt-card p {
-  color: #a9bad1;
-  line-height: 1.8;
-  font-size: 15px;
-  margin: 0;
-}
-
-.gt-card-label {
-  color: #7dd3fc;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 1.4px;
-  text-transform: uppercase;
-  margin-bottom: 15px;
-  display: block;
-}
-
-.gt-projects {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.gt-projects .gt-card {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.gt-projects .gt-card p {
-  margin-bottom: 18px;
-}
-
-.gt-projects .gt-card .gt-card-label {
-  margin-top: 0;
-}
-
-.gt-metric {
-  border-top: 1px solid #293b51;
-  padding-top: 14px;
-  margin-top: auto;
-  color: #7dd3fc;
-  font-size: 13px;
-  line-height: 1.7;
-}
-
-.gt-process {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.gt-step {
-  position: relative;
-  background: #111b2d;
-  border: 1px solid #263b55;
-  border-radius: 16px;
-  padding: 25px 20px;
-}
-
-.gt-step-number {
-  color: #38bdf8;
-  font-size: 30px;
-  font-weight: 800;
-  margin-bottom: 22px;
-  display: block;
-}
-
-.gt-step h3 {
-  color: #ffffff;
-  font-size: 19px;
-  margin: 0 0 10px;
-}
-
-.gt-step p {
-  color: #a9bad1;
-  font-size: 14px;
-  line-height: 1.8;
-  margin: 0;
-}
-
-.gt-note {
-  color: #91a5bd;
-  text-align: center;
-  font-size: 13px;
-  line-height: 1.7;
-  max-width: 780px;
-  margin: 26px auto 0;
-}
-
-@media (max-width: 850px) {
-  .gt-projects {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .gt-process {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 560px) {
-  .gt-section {
-    padding: 54px 16px;
-  }
-
-  .gt-grid,
-  .gt-projects,
-  .gt-process {
-    grid-template-columns: 1fr;
-  }
-
-  .gt-card {
-    padding: 23px;
-  }
-}
-
   </style>
 </head>
 
 <body>
-  <header>
-    <div class="container">
-      <nav aria-label="Main navigation">
-        <a class="logo" href="#home">Growtech<span>digital</span></a>
-        <div class="navlinks">
-          <a href="#home">Home</a>
-          <a href="#services">Services</a>
-          <a href="#work">Our Work</a>
-          <a href="#about">About</a>
-          <a href="#faq">FAQs</a>
-          <a href="#contact">Contact</a>
-        </div>
+
+  <!-- NAVIGATION -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="logo">Growtech<span>digital</span></a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#approach">Our Approach</a>
+        <a href="#projects">Projects</a>
+        <a href="about.html">About Us</a>
+        <a href="#contact" class="nav-cta">Let's Talk</a>
       </nav>
     </div>
   </header>
 
   <main>
+
     <!-- HERO -->
     <section class="hero" id="home">
-      <div class="container">
-        <span class="tag">Your Digital Growth Partner</span>
-        <h1>
-          Grow Your Business<br>
-          <span class="highlight">Beyond Limits.</span>
-        </h1>
-        <p>
-          Build a stronger online presence with digital marketing
-          strategies designed around your business goals.
-          Explore SEO, website design, social media marketing
-          and more with Growtechdigital.
-        </p>
-        <a class="btn" href="#contact">Discuss Your Goals</a>
-        <a class="btn secondary" href="#services">Explore Services</a>
+      <div class="container hero-grid">
+
+        <div class="hero-content">
+          <span class="eyebrow">Digital Marketing Agency · Delhi NCR</span>
+
+          <h1>
+            Build Your Brand.<br>
+            Grow Your <span>Digital Presence.</span>
+          </h1>
+
+          <p class="hero-copy">
+            Thoughtful digital marketing and website solutions to help
+            businesses communicate clearly, reach relevant audiences
+            and build a stronger online presence.
+          </p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#services">
+              Explore Our Services &rarr;
+            </a>
+
+            <a class="btn btn-secondary" href="#contact">
+              Discuss Your Goals
+            </a>
+          </div>
+
+          <p class="hero-note">
+            SEO · Website Design · Social Media · Content Marketing · PPC
+          </p>
+        </div>
+
+        <div class="hero-visual" aria-label="Digital marketing services overview">
+          <div class="visual-glow"></div>
+
+          <div class="visual-card">
+            <div class="visual-top">
+              <strong>Your Digital Growth</strong>
+              <span class="status">Strategy First</span>
+            </div>
+
+            <p class="visual-title">
+              Key areas of digital marketing
+            </p>
+
+            <div class="visual-item">
+              <div class="visual-icon" aria-hidden="true">↗</div>
+              <div>
+                <strong>Search Engine Optimization</strong>
+                <small>Improve search visibility</small>
+              </div>
+            </div>
+
+            <div class="visual-item">
+              <div class="visual-icon" aria-hidden="true">▦</div>
+              <div>
+                <strong>Website Design</strong>
+                <small>Create a clear online experience</small>
+              </div>
+            </div>
+
+            <div class="visual-item">
+              <div class="visual-icon" aria-hidden="true">◎</div>
+              <div>
+                <strong>Social Media Marketing</strong>
+                <small>Connect with your audience</small>
+              </div>
+            </div>
+
+            <div class="visual-item">
+              <div class="visual-icon" aria-hidden="true">⌁</div>
+              <div>
+                <strong>Content & Paid Campaigns</strong>
+                <small>Support relevant business goals</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
     <!-- SERVICES -->
-    <section id="services">
+    <section class="section section-alt" id="services">
       <div class="container">
-        <div class="section-title">
-          <p class="eyebrow">What We Do</p>
-          <h2>Digital Marketing Services for Your Business</h2>
+
+        <div class="section-heading">
+          <span class="section-label">What We Do</span>
+          <h2>Digital Services for Your Business</h2>
           <p>
-            Practical digital solutions to help your business
-            strengthen its online presence and connect with its audience.
+            Explore practical digital solutions that can help your
+            business build visibility, communicate its value and
+            connect with potential customers.
           </p>
         </div>
 
-        <div class="grid">
-          <article class="card">
-            <h3><a href="seo.html">Search Engine Optimization</a></h3>
+        <div class="service-grid">
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">↗</div>
+            <h3>Search Engine Optimization</h3>
             <p>
-              Improve website structure, content and search visibility
-              through on-page, technical and local SEO improvements.
+              Improve website structure, content relevance and search
+              visibility through on-page, technical and local SEO.
             </p>
-            <a class="card-link" href="seo.html">Explore SEO Services →</a>
+            <a class="text-link" href="seo.html">
+              Explore SEO Services <span aria-hidden="true">&rarr;</span>
+            </a>
           </article>
 
-          <article class="card">
-            <h3>Social Media Marketing</h3>
-            <p>
-              Build a consistent social presence with content planning,
-              audience engagement and platform-specific strategies.
-            </p>
-          </article>
-
-          <article class="card">
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">▦</div>
             <h3>Website Design</h3>
             <p>
-              Create a professional, mobile-friendly website that
-              explains your services and makes it easy to contact you.
+              Create clear, responsive website experiences that
+              introduce your business and make it easier for visitors
+              to explore your services.
             </p>
+            <a class="text-link" href="#contact">
+              Discuss Your Website <span aria-hidden="true">&rarr;</span>
+            </a>
           </article>
 
-          <article class="card">
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">◎</div>
+            <h3>Social Media Marketing</h3>
+            <p>
+              Plan relevant social media content that communicates
+              your brand message and encourages meaningful engagement.
+            </p>
+            <a class="text-link" href="#contact">
+              Discuss Social Media <span aria-hidden="true">&rarr;</span>
+            </a>
+          </article>
+
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">✎</div>
             <h3>Content Marketing</h3>
             <p>
-              Develop useful content that answers customer questions,
-              communicates expertise and supports your marketing goals.
+              Organize useful content ideas around your audience's
+              questions, services and business objectives.
             </p>
+            <a class="text-link" href="#contact">
+              Discuss Content <span aria-hidden="true">&rarr;</span>
+            </a>
           </article>
 
-          <article class="card">
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">⌁</div>
             <h3>Pay-Per-Click Advertising</h3>
             <p>
-              Plan targeted advertising campaigns around your audience,
-              budget and clearly defined campaign objectives.
+              Plan targeted paid advertising campaigns around relevant
+              audiences, landing pages and measurable objectives.
             </p>
+            <a class="text-link" href="#contact">
+              Discuss Advertising <span aria-hidden="true">&rarr;</span>
+            </a>
           </article>
 
-          <article class="card">
-            <h3>Local SEO</h3>
+          <article class="service-card">
+            <div class="service-icon" aria-hidden="true">⌕</div>
+            <h3>Digital Strategy</h3>
             <p>
-              Improve local search visibility with relevant location
-              pages, website optimization and accurate business details.
+              Identify suitable digital channels, set priorities
+              and organize marketing activities around your goals.
             </p>
-            <a class="card-link" href="seo.html">Learn About SEO →</a>
+            <a class="text-link" href="#contact">
+              Plan Your Strategy <span aria-hidden="true">&rarr;</span>
+            </a>
           </article>
+
         </div>
       </div>
     </section>
 
-    <!-- WHY CHOOSE US -->
-    <section class="about" id="why-us">
+    <!-- OUR APPROACH: NO ABOUT US SECTION HERE -->
+    <section class="section" id="approach">
       <div class="container">
-        <div class="section-title">
-          <p class="eyebrow">The Growtechdigital Approach</p>
-          <h2>A Thoughtful Approach to Digital Growth</h2>
+
+        <div class="section-heading">
+          <span class="section-label">Our Approach</span>
+          <h2>The Growtechdigital Approach</h2>
           <p>
-            Good marketing starts with understanding the business,
-            choosing the right priorities and communicating clearly.
+            Thoughtful strategy, clear communication and relevant
+            improvements to support your digital goals.
           </p>
         </div>
 
-        <div class="why-grid">
-          <article class="why-item">
+        <div class="approach-grid">
+
+          <article class="approach-card">
+            <span class="card-label">01 / Strategy</span>
             <h3>Strategy Around Your Goals</h3>
             <p>
-              Start by understanding your business, audience and
-              objectives before deciding which digital activities to prioritize.
+              Understand your business, audience and objectives
+              before deciding which digital activities to prioritize.
             </p>
           </article>
 
-          <article class="why-item">
+          <article class="approach-card">
+            <span class="card-label">02 / Transparency</span>
             <h3>Clear Communication</h3>
             <p>
               Keep project scope, planned activities and next steps
-              clear so you understand what work is being done.
+              clear so you understand the work being discussed.
             </p>
           </article>
 
-          <article class="why-item">
+          <article class="approach-card">
+            <span class="card-label">03 / Content</span>
             <h3>Useful, Relevant Content</h3>
             <p>
               Focus on content that helps visitors understand your
@@ -707,269 +1001,291 @@
             </p>
           </article>
 
-          <article class="why-item">
+          <article class="approach-card">
+            <span class="card-label">04 / Improvement</span>
             <h3>Measure and Improve</h3>
             <p>
               Where tracking is available, review relevant metrics
               and use the findings to guide future improvements.
             </p>
           </article>
+
         </div>
       </div>
     </section>
 
-    <!-- OUR WORK / CONCEPT PROJECTS -->
-    <section id="work">
+    <!-- SAMPLE PROJECTS -->
+    <section class="section section-alt" id="projects">
       <div class="container">
-        <div class="section-title">
-          <p class="eyebrow">Ideas in Action</p>
-          <h2>Sample Projects & Marketing Concepts</h2>
+
+        <div class="section-heading">
+          <span class="section-label">Ideas in Action</span>
+          <h2>Sample Projects &amp; Marketing Concepts</h2>
           <p>
-            Explore examples of how digital marketing strategies
+            Illustrative examples of how digital marketing strategies
             can be planned for different types of businesses.
           </p>
         </div>
 
-        <div class="grid">
-          <article class="card">
-            <span class="case-label">Concept Project · SEO</span>
+        <div class="project-grid">
+
+          <article class="project-card">
+            <span class="project-tag">Concept · SEO</span>
             <h3>Local Business SEO Strategy</h3>
             <p>
               <strong>Objective:</strong> Help a hypothetical local
-              service business become easier to discover online.
+              business improve its visibility in relevant search results.
             </p>
-            <p style="margin-top:12px;">
-              <strong>Proposed approach:</strong> Review search intent,
-              improve page titles and headings, create useful service
-              content and identify relevant local SEO opportunities.
+            <p>
+              <strong>Approach:</strong> Review search intent, improve
+              page titles and headings, develop useful service content
+              and identify relevant local SEO opportunities.
             </p>
-            <p style="margin-top:12px;">
-              <strong>How to measure:</strong> Track search impressions,
-              organic clicks and relevant enquiries after implementation.
-            </p>
+            <div class="project-measure">
+              <strong>Evaluation:</strong> Search impressions,
+              organic clicks and relevant enquiries.
+            </div>
           </article>
 
-          <article class="card">
-            <span class="case-label">Concept Project · Website</span>
+          <article class="project-card">
+            <span class="project-tag">Concept · Website</span>
             <h3>Small Business Website Refresh</h3>
             <p>
-              <strong>Objective:</strong> Make a hypothetical small
-              business website clearer and easier to use.
+              <strong>Objective:</strong> Make a hypothetical business
+              website clearer and easier to navigate.
             </p>
-            <p style="margin-top:12px;">
-              <strong>Proposed approach:</strong> Organize services,
+            <p>
+              <strong>Approach:</strong> Organize service information,
               improve mobile layouts, clarify calls to action and
-              make contact information easier to find.
+              make contact details easier to find.
             </p>
-            <p style="margin-top:12px;">
-              <strong>How to measure:</strong> Review contact clicks,
-              enquiry submissions and mobile usability after launch.
-            </p>
+            <div class="project-measure">
+              <strong>Evaluation:</strong> Contact clicks,
+              enquiry submissions and mobile usability.
+            </div>
           </article>
 
-          <article class="card">
-            <span class="case-label">Concept Project · Social Media</span>
+          <article class="project-card">
+            <span class="project-tag">Concept · Social Media</span>
             <h3>Social Media Content Plan</h3>
             <p>
               <strong>Objective:</strong> Help a hypothetical local
-              brand publish more consistent and useful content.
+              brand communicate consistently with its audience.
             </p>
-            <p style="margin-top:12px;">
-              <strong>Proposed approach:</strong> Build content themes,
-              plan educational posts, prepare a publishing calendar
-              and align posts with business goals.
+            <p>
+              <strong>Approach:</strong> Develop content themes,
+              educational post ideas, captions and a publishing
+              calendar aligned with business goals.
             </p>
-            <p style="margin-top:12px;">
-              <strong>How to measure:</strong> Monitor reach, engagement,
+            <div class="project-measure">
+              <strong>Evaluation:</strong> Reach, engagement,
               profile visits and relevant website traffic.
-            </p>
+            </div>
           </article>
+
         </div>
 
-        <div class="case-note">
+        <p class="project-note">
           These are illustrative concept projects, not completed client
           case studies. No client results or performance figures are claimed.
-        </div>
+        </p>
+
       </div>
     </section>
 
-    <!-- PROCESS -->
-    <section id="process" class="about">
+    <!-- HOW WE WORK -->
+    <section class="section" id="process">
       <div class="container">
-        <div class="section-title">
-          <p class="eyebrow">How We Work</p>
+
+        <div class="section-heading">
+          <span class="section-label">Our Process</span>
           <h2>A Clear, Simple Process</h2>
           <p>
             Understand the need, plan the work, implement improvements
-            and review progress.
+            and review progress through a straightforward process.
           </p>
         </div>
 
         <div class="process-grid">
-          <article class="process-step">
-            <span class="step-number">01</span>
+
+          <article class="process-card">
+            <span class="process-number">01</span>
             <h3>Discover</h3>
-            <p>Discuss your business, audience, needs and objectives.</p>
+            <p>
+              Understand your business, audience, needs and objectives.
+            </p>
           </article>
 
-          <article class="process-step">
-            <span class="step-number">02</span>
+          <article class="process-card">
+            <span class="process-number">02</span>
             <h3>Plan</h3>
-            <p>Identify priorities, deliverables, timelines and scope.</p>
+            <p>
+              Identify priorities, deliverables, timelines and project scope.
+            </p>
           </article>
 
-          <article class="process-step">
-            <span class="step-number">03</span>
+          <article class="process-card">
+            <span class="process-number">03</span>
             <h3>Implement</h3>
-            <p>Carry out the agreed marketing or website work.</p>
+            <p>
+              Carry out the agreed marketing or website activities.
+            </p>
           </article>
 
-          <article class="process-step">
-            <span class="step-number">04</span>
+          <article class="process-card">
+            <span class="process-number">04</span>
             <h3>Review</h3>
-            <p>Review available data and identify possible improvements.</p>
+            <p>
+              Review available information and identify possible improvements.
+            </p>
           </article>
+
         </div>
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section id="about">
+    <!-- FAQs -->
+    <section class="section section-alt" id="faqs">
       <div class="container">
-        <div class="about-content">
-          <p class="eyebrow">About Us</p>
-          <h2>About Growtechdigital</h2>
-          <p>
-            Growtechdigital focuses on helping businesses strengthen
-            their online presence through SEO, website design,
-            social media marketing and other digital services.
-          </p>
-          <p>
-            Our approach is built around understanding business goals,
-            communicating clearly and choosing practical digital
-            improvements suited to each project's needs.
-          </p>
-        </div>
-      </div>
-    </section>
 
-    <!-- FAQ -->
-    <section id="faq" class="about">
-      <div class="container">
-        <div class="section-title">
-          <p class="eyebrow">Frequently Asked Questions</p>
-          <h2>Questions About Our Digital Marketing Services</h2>
+        <div class="section-heading">
+          <span class="section-label">FAQs</span>
+          <h2>Frequently Asked Questions</h2>
           <p>
-            Helpful answers to common questions before starting a project.
+            A few useful answers to help you understand our digital services.
           </p>
         </div>
 
         <div class="faq-list">
-          <details>
-            <summary>What digital marketing services does Growtechdigital offer?</summary>
-            <p>
-              Our listed services include SEO, social media marketing,
-              website design, content marketing, pay-per-click advertising
-              and local SEO. Project scope depends on the service selected.
-            </p>
-          </details>
 
-          <details>
-            <summary>Can you help businesses in Delhi NCR?</summary>
+          <article class="faq-item">
+            <h3>What services does Growtechdigital offer?</h3>
+            <p>
+              Our service areas include SEO, website design, social media
+              marketing, content marketing, PPC advertising and digital strategy.
+            </p>
+          </article>
+
+          <article class="faq-item">
+            <h3>Do you provide SEO services for local businesses?</h3>
+            <p>
+              We offer SEO-related services and planning, including
+              on-page, technical and local SEO activities based on
+              the business's needs and agreed project scope.
+            </p>
+          </article>
+
+          <article class="faq-item">
+            <h3>How long does SEO take to show results?</h3>
+            <p>
+              SEO timelines vary depending on competition, website
+              condition, content and other factors. Improvements are
+              not guaranteed within a specific timeframe.
+            </p>
+          </article>
+
+          <article class="faq-item">
+            <h3>Do you work with businesses in Delhi NCR?</h3>
             <p>
               Growtechdigital is targeting businesses across Delhi NCR,
               including Delhi, Noida, Ghaziabad, Faridabad and Gurugram.
-              Contact us to discuss your business and project requirements.
+              Contact us to discuss your requirements.
             </p>
-          </details>
+          </article>
 
-          <details>
-            <summary>How long does SEO take to show results?</summary>
+          <article class="faq-item">
+            <h3>How can I discuss a project with you?</h3>
             <p>
-              SEO timelines vary based on website condition, competition,
-              content quality and the work required. Meaningful improvements
-              can take several months, and specific rankings or results
-              cannot be guaranteed.
+              Email us with a brief description of your business,
+              the service you need and your main goals.
             </p>
-          </details>
+          </article>
 
-          <details>
-            <summary>How much do digital marketing services cost?</summary>
-            <p>
-              Pricing depends on the service, project scope, required
-              deliverables and duration. Contact us with your goals so
-              the project requirements can be discussed before a quote.
-            </p>
-          </details>
-
-          <details>
-            <summary>How long does it take to build a website?</summary>
-            <p>
-              The timeline depends on the number of pages, design
-              requirements, functionality and how quickly content
-              and feedback are provided. The expected schedule should
-              be agreed before the project begins.
-            </p>
-          </details>
-
-          <details>
-            <summary>Do you guarantee first-page Google rankings?</summary>
-            <p>
-              No. Search rankings depend on many factors, including
-              competition, search intent, website quality and Google's
-              systems. SEO work can improve a site's foundations, but
-              no specific position can be honestly guaranteed.
-            </p>
-          </details>
-
-          <details>
-            <summary>How can I get started?</summary>
-            <p>
-              Email us with a short description of your business,
-              the service you are interested in and your main goal.
-              We can then discuss the next steps.
-            </p>
-          </details>
         </div>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact">
+    <section class="section" id="contact">
       <div class="container">
+
         <div class="contact-box">
-          <p class="eyebrow">Let's Talk</p>
-          <h2>Ready to Discuss Your Digital Growth Goals?</h2>
-          <p>
-            Tell us about your business, the challenges you are facing
-            and the digital service you are interested in.
-          </p>
-          <a class="btn"
-             href="mailto:khushimalik250617@gmail.com?subject=Digital%20Marketing%20Enquiry">
-            Contact Growtechdigital
-          </a>
-          <p class="muted" style="font-size:14px;">
-            Email: khushimalik250617@gmail.com
-          </p>
+          <div>
+            <span class="section-label">Let's Connect</span>
+            <h2>Ready to Discuss Your Digital Goals?</h2>
+            <p>
+              Tell us about your business, your current challenges
+              and the digital services you are interested in exploring.
+            </p>
+
+            <div style="margin-top:25px;">
+              <a class="btn btn-primary"
+                 href="mailto:khushimalik250617@gmail.com?subject=Digital%20Marketing%20Enquiry">
+                Get in Touch &rarr;
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-details">
+            <div class="contact-line">
+              <span>Email Us</span>
+              <a href="mailto:khushimalik250617@gmail.com">
+                khushimalik250617@gmail.com
+              </a>
+            </div>
+
+            <div class="contact-line">
+              <span>Service Focus</span>
+              <p>Delhi NCR, India</p>
+            </div>
+
+            <div class="contact-line">
+              <span>Digital Services</span>
+              <p>SEO, Websites, Social Media &amp; Digital Marketing</p>
+            </div>
+          </div>
         </div>
+
       </div>
     </section>
+
   </main>
 
-  <footer>
-    <div class="container">
-      <p>
-        © <span id="year"></span> Growtechdigital. All rights reserved.
-      </p>
-      <p style="margin-top:8px;">
-        <a href="#home">Back to top ↑</a>
-      </p>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-main">
+
+      <div class="footer-brand">
+        <a href="index.html" class="logo">Growtech<span>digital</span></a>
+        <p>
+          Digital marketing and website solutions focused on helping
+          businesses strengthen their online presence.
+        </p>
+      </div>
+
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="about.html">About Us</a>
+        <a href="#faqs">FAQs</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        &copy; <span id="current-year">2026</span> Growtechdigital.
+        All rights reserved.
+      </div>
     </div>
   </footer>
 
   <script>
-    document.getElementById("year").textContent =
+    document.getElementById("current-year").textContent =
       new Date().getFullYear();
   </script>
+
 </body>
 </html>
