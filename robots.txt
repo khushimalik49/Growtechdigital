@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://khushimalik49.github.io/Growtechdigital/sitemap.xml
